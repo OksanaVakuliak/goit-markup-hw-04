@@ -40,6 +40,8 @@ p {
   width: 100%;
   z-index: 1000;
   background-color: #ffffff;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .flex-container {
   display: flex;
@@ -71,6 +73,7 @@ p {
   padding: 0;
 }
 .navigation-link .link {
+  position: relative;
   padding-top: 24px;
   padding-bottom: 24px;
   font-weight: 500;
@@ -79,6 +82,17 @@ p {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation-link .link::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 .navigation-link .link:hover,
 .navigation-link .link:focus {
@@ -88,8 +102,8 @@ p {
   color: #404bbf;
   position: relative;
 }
-/*.navigation-link .link*/
-#studio-header:active::after {
+
+/* #studio-header:active::after {
   content: "";
   position: absolute;
   bottom: 4px;
@@ -118,7 +132,8 @@ p {
   height: 4px;
   background-color: #4d5ae5;
   border-radius: 2px;
-}
+} */
+
 .all-adresses {
   font-style: normal;
 }
