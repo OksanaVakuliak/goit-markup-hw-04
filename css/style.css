@@ -435,7 +435,6 @@ ul {
 }
 .social-icons-footer {
   display: flex;
-  gap: 16px;
   align-content: flex-start;
   justify-content: flex-start;
   flex-direction: column;
@@ -460,6 +459,8 @@ ul {
   background-color: #31d0aa;
 }
 .social-icons-footer .text-section {
+  display: block;
+  margin-bottom: 16px;
   font-weight: 500;
   color: #fff;
 }
